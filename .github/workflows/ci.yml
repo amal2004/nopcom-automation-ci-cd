@@ -39,10 +39,8 @@ jobs:
       - name: Run Selenium tests (headless, public)
         run: |
           mvn clean test \
-            -Denv=public \
             -Dheadless=true \
             -DbaseUrl="https://plugindemos.supernopcommerce.com" \
-            -Dtest=nopcom.autm.tests.RegistrationTests
 
       - name: Upload test reports
         if: always()
