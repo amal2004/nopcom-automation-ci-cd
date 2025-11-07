@@ -36,11 +36,11 @@ jobs:
       - name: Verify Chrome install
         run: google-chrome --version
 
-      - name: Run Selenium tests (headless, public)
+      - name: Run Selenium tests (public URL)
         run: |
           mvn clean test \
             -Dheadless=true \
-            -DbaseUrl="https://plugindemos.supernopcommerce.com" \
+            -DbaseUrl="https://plugindemos.supernopcommerce.com"
 
       - name: Upload test reports
         if: always()
