@@ -1,0 +1,10 @@
+nopcom\autm\base\BasePage.class
+nopcom\autm\tests\RegistrationTests.class
+nopcom\autm\utils\ScreenshotUtil.class
+nopcom\autm\utils\ExcelUtils.class
+nopcom\autm\driver\WebDriverFactory.class
+nopcom\autm\pages\RegistrationPage.class
+nopcom\autm\config\ConfigReader.class
+nopcom\autm\utils\CSVUtils.class
+nopcom\autm\listeners\RetryAnalyzer.class
+nopcom\autm\listeners\TestListener.class

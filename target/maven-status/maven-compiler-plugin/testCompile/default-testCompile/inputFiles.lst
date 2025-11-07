@@ -1,0 +1,10 @@
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\base\BasePage.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\config\ConfigReader.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\driver\WebDriverFactory.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\listeners\RetryAnalyzer.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\listeners\TestListener.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\pages\RegistrationPage.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\tests\RegistrationTests.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\utils\CSVUtils.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\utils\ExcelUtils.java
+C:\Users\amalw\eclipse-workspace\NOPCOM.AUTM.GITCI.CD\src\test\java\nopcom\autm\utils\ScreenshotUtil.java
