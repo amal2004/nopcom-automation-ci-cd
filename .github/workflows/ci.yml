@@ -41,7 +41,7 @@ jobs:
           mvn clean test \
             -Denv=public \
             -Dheadless=true \
-            -Dlocal.url="https://plugindemos.supernopcommerce.com/register" \
+            -DbaseUrl.url="https://plugindemos.supernopcommerce.com/register" \
             -Dtest=nopcom.autm.tests.RegistrationTests
 
       - name: Upload test reports
