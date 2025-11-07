@@ -2,46 +2,46 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-07T15:50:48 EST" name="RegistrationSuite" finished-at="2025-11-07T15:50:58 EST" duration-ms="9763">
+  <suite started-at="2025-11-07T18:07:14 EST" name="RegistrationSuite" finished-at="2025-11-07T18:07:30 EST" duration-ms="16359">
     <groups>
     </groups>
-    <test started-at="2025-11-07T15:50:48 EST" name="RegistrationTests" finished-at="2025-11-07T15:50:58 EST" duration-ms="9763">
+    <test started-at="2025-11-07T18:07:14 EST" name="RegistrationTests" finished-at="2025-11-07T18:07:30 EST" duration-ms="16359">
       <class name="nopcom.autm.tests.RegistrationTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:49 EST" name="setup" finished-at="2025-11-07T15:50:49 EST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:14 EST" name="setup" finished-at="2025-11-07T18:07:14 EST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registrationFromExcel([Ljava.lang.String;)[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:49 EST" name="registrationFromExcel" data-provider="excelData" finished-at="2025-11-07T15:50:54 EST" duration-ms="5115" status="PASS">
+        <test-method signature="registrationFromExcel([Ljava.lang.String;)[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:14 EST" name="registrationFromExcel" data-provider="excelData" finished-at="2025-11-07T18:07:25 EST" duration-ms="10072" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@14536b03]]>
+                <![CDATA[[Ljava.lang.String;@59638f9e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationFromExcel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:54 EST" name="tearDown" finished-at="2025-11-07T15:50:54 EST" duration-ms="592" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:25 EST" name="tearDown" finished-at="2025-11-07T18:07:25 EST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:54 EST" name="setup" finished-at="2025-11-07T15:50:54 EST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:25 EST" name="setup" finished-at="2025-11-07T18:07:25 EST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registrationFromExcel([Ljava.lang.String;)[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:54 EST" name="registrationFromExcel" data-provider="excelData" finished-at="2025-11-07T15:50:57 EST" duration-ms="2775" status="PASS">
+        <test-method signature="registrationFromExcel([Ljava.lang.String;)[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:25 EST" name="registrationFromExcel" data-provider="excelData" finished-at="2025-11-07T18:07:30 EST" duration-ms="5354" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@3e912c52]]>
+                <![CDATA[[Ljava.lang.String;@49d93f71]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrationFromExcel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T15:50:57 EST" name="tearDown" finished-at="2025-11-07T15:50:58 EST" duration-ms="639" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:nopcom.autm.tests.RegistrationTests@2f953efd]" started-at="2025-11-07T18:07:30 EST" name="tearDown" finished-at="2025-11-07T18:07:30 EST" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

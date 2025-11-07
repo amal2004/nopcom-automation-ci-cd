@@ -1,4 +1,4 @@
-name: Selenium CI (Localhost)
+name: Selenium CI (Public)
 
 on:
   push:
@@ -36,12 +36,12 @@ jobs:
       - name: Verify Chrome install
         run: google-chrome --version
 
-      - name: Run Selenium tests (headless, local)
+      - name: Run Selenium tests (headless, public)
         run: |
           mvn clean test \
-            -Denv=local \
+            -Denv=public \
             -Dheadless=true \
-            -Dlocal.url="http://localhost:5000/register?returnUrl=%2F" \
+            -Dlocal.url="https://plugindemos.supernopcommerce.com/register" \
             -Dtest=nopcom.autm.tests.RegistrationTests
 
       - name: Upload test reports
