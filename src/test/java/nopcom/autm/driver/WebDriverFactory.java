@@ -25,12 +25,19 @@ public class WebDriverFactory {
         if ("chrome".equalsIgnoreCase(browser)) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            
+            
             if (ConfigReader.isHeadless()) {
                 options.addArguments("--headless=new","--disable-gpu","--window-size=1920,1080");
             } else {
                 options.addArguments("--window-size=1920,1080");
             }
-            options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+  
             WebDriver driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigReader.getImplicitWait()));
             driver.manage().window().maximize();
