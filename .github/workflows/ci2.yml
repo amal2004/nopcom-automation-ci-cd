@@ -1,4 +1,4 @@
-name: Selenium CI (Matrix + Parallel TestNG)
+name: Selenium CI (Public - Cross Browser)
 
 on:
   push:
@@ -10,13 +10,8 @@ jobs:
   selenium-tests:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
         browser: [chrome, firefox, edge]
-
-    env:
-      HEADLESS: true
-      BASE_URL: "https://plugindemos.supernopcommerce.com"
 
     steps:
       - name: Checkout repository
@@ -36,7 +31,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Install all browsers for matrix
+      # 🟢 Install Browsers
       - name: Install Chrome
         if: matrix.browser == 'chrome'
         uses: browser-actions/setup-chrome@v1
@@ -55,22 +50,25 @@ jobs:
         with:
           edge-version: stable
 
-      - name: Verify browsers
+      # 🔍 Verify Browser install
+      - name: Verify browser install
         run: |
-          echo "=== Installed Browsers ==="
-          google-chrome --version || true
-          firefox --version || true
-          microsoft-edge --version || true
+          if [ "${{ matrix.browser }}" == "chrome" ]; then google-chrome --version; fi
+          if [ "${{ matrix.browser }}" == "firefox" ]; then firefox --version; fi
+          if [ "${{ matrix.browser }}" == "edge" ]; then microsoft-edge --version; fi
 
-      - name: Run Selenium TestNG suite (parallel)
+      # 🧪 Run Selenium tests
+      - name: Run Selenium tests (${{ matrix.browser }})
         run: |
-          echo "Running tests on browser: ${{ matrix.browser }}"
           mvn clean test \
             -Dbrowser=${{ matrix.browser }} \
-            -Dheadless=${{ env.HEADLESS }} \
-            -DbaseUrl=${{ env.BASE_URL }} \
-            -Dsurefire.suiteXmlFiles=testng.xml
+            -Dheadless=true \
+            -DbaseUrl="https://plugindemos.supernopcommerce.com" \
+            -Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080" \
+            -Dwebdriver.firefox.args="--headless --width=1920 --height=1080" \
+            -Dwebdriver.edge.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
 
+      # 📦 Upload test reports
       - name: Upload test reports
         if: always()
         uses: actions/upload-artifact@v4
