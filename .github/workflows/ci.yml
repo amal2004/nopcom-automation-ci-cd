@@ -1,4 +1,4 @@
-name: Selenium CI (Public)
+name: Selenium CI (Public - Cross Browser)
 
 on:
   push:
@@ -9,6 +9,9 @@ on:
 jobs:
   selenium-tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome, firefox, edge]
 
     steps:
       - name: Checkout repository
@@ -28,26 +31,49 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      # 🟢 Install Browsers
       - name: Install Chrome
+        if: matrix.browser == 'chrome'
         uses: browser-actions/setup-chrome@v1
         with:
           chrome-version: stable
 
-      - name: Verify Chrome install
-        run: google-chrome --version
+      - name: Install Firefox
+        if: matrix.browser == 'firefox'
+        uses: browser-actions/setup-firefox@v1
+        with:
+          firefox-version: latest
 
-      - name: Run Selenium tests (public URL)
+      - name: Install Edge
+        if: matrix.browser == 'edge'
+        uses: browser-actions/setup-edge@v1
+        with:
+          edge-version: stable
+
+      # 🔍 Verify Browser install
+      - name: Verify browser install
+        run: |
+          if [ "${{ matrix.browser }}" == "chrome" ]; then google-chrome --version; fi
+          if [ "${{ matrix.browser }}" == "firefox" ]; then firefox --version; fi
+          if [ "${{ matrix.browser }}" == "edge" ]; then microsoft-edge --version; fi
+
+      # 🧪 Run Selenium tests
+      - name: Run Selenium tests (${{ matrix.browser }})
         run: |
           mvn clean test \
+            -Dbrowser=${{ matrix.browser }} \
             -Dheadless=true \
             -DbaseUrl="https://plugindemos.supernopcommerce.com" \
-            -Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
+            -Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080" \
+            -Dwebdriver.firefox.args="--headless --width=1920 --height=1080" \
+            -Dwebdriver.edge.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
 
+      # 📦 Upload test reports
       - name: Upload test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-reports
+          name: test-reports-${{ matrix.browser }}
           path: |
             target/surefire-reports
             target/allure-results
