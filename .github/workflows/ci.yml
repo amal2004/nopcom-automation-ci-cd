@@ -41,7 +41,7 @@ jobs:
           mvn clean test \
             -Dheadless=true \
             -DbaseUrl="https://plugindemos.supernopcommerce.com" \
-			-Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
+            -Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
 
       - name: Upload test reports
         if: always()
