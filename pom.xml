@@ -20,12 +20,12 @@
 			<version>4.14.0</version>
 		</dependency>
 
-	<dependency>
-  <groupId>org.testng</groupId>
-  <artifactId>testng</artifactId>
-  <version>7.10.2</version>
-  <scope>test</scope> <!-- change from test to compile -->
-</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+			<scope>test</scope> <!-- change from test to compile -->
+		</dependency>
 
 		<!-- WebDriverManager -->
 		<dependency>

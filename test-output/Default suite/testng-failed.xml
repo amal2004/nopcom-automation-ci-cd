@@ -6,8 +6,8 @@
       <class name="nopcom.autm.tests.RegistrationTests">
         <methods>
           <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="registrationFromExcel" invocation-numbers="0 1"/>
+          <include name="teardown"/>
+          <include name="registrationFromExcel"/>
         </methods>
       </class> <!-- nopcom.autm.tests.RegistrationTests -->
     </classes>

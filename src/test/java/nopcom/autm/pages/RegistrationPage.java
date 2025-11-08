@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import nopcom.autm.base.BasePage;
 
 public class RegistrationPage extends BasePage {
+	
+	
 
     @FindBy(id = "gender-male")
     private WebElement genderMale;

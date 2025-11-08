@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-RegistrationSuite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,26 @@
                       <a href="#" panel-name="suite-RegistrationSuite" class="show-methods passed suite-RegistrationSuite"> (show)</a> <!-- show-methods passed suite-RegistrationSuite -->
                     </span>
                     <div class="method-list-content passed suite-RegistrationSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-RegistrationSuite" title="nopcom.autm.tests.RegistrationTests" class="method navigator-link" hash-for-method="registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-RegistrationSuite" title="nopcom.autm.tests.RegistrationTests" class="method navigator-link" hash-for-method="registrationFromExcel([John, Doe, john+1@example.com, Password123])">registrationFromExcel([John, Doe, john+1@example.com, Password123])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-RegistrationSuite" title="nopcom.autm.tests.RegistrationTests" class="method navigator-link" hash-for-method="registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-RegistrationSuite" title="nopcom.autm.tests.RegistrationTests" class="method navigator-link" hash-for-method="registrationFromExcel([John, Doe, john+1@example.com, Password123])">registrationFromExcel([John, Doe, john+1@example.com, Password123])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-RegistrationSuite" title="nopcom.autm.tests.RegistrationTests" class="method navigator-link" hash-for-method="registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</a> <!-- method navigator-link -->
@@ -145,6 +165,38 @@
                   <span class="parameters">([John, Doe, john+1@example.com, Password123])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])">
+                  </a> <!-- registrationFromExcel([Jane, Smith, jane+1@example.com, Password123]) -->
+                  <span class="method-name">registrationFromExcel</span>
+                  <span class="parameters">([Jane, Smith, jane+1@example.com, Password123])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationFromExcel([John, Doe, john+1@example.com, Password123])">
+                  </a> <!-- registrationFromExcel([John, Doe, john+1@example.com, Password123]) -->
+                  <span class="method-name">registrationFromExcel</span>
+                  <span class="parameters">([John, Doe, john+1@example.com, Password123])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])">
+                  </a> <!-- registrationFromExcel([Jane, Smith, jane+1@example.com, Password123]) -->
+                  <span class="method-name">registrationFromExcel</span>
+                  <span class="parameters">([Jane, Smith, jane+1@example.com, Password123])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationFromExcel([John, Doe, john+1@example.com, Password123])">
+                  </a> <!-- registrationFromExcel([John, Doe, john+1@example.com, Password123]) -->
+                  <span class="method-name">registrationFromExcel</span>
+                  <span class="parameters">([John, Doe, john+1@example.com, Password123])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-RegistrationSuite-class-passed -->
         </div> <!-- panel RegistrationSuite -->
@@ -157,11 +209,24 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;RegistrationSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;RegistrationTests&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;ChromeTests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;nopcom.autm.tests.RegistrationTests&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- RegistrationTests --&gt;
+  &lt;/test&gt; &lt;!-- ChromeTests --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;FirefoxTests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;nopcom.autm.tests.RegistrationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxTests --&gt;
+  &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;EdgeTests&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;nopcom.autm.tests.RegistrationTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- EdgeTests --&gt;
 &lt;/suite&gt; &lt;!-- RegistrationSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,7 +238,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">RegistrationTests (1 class)</span>
+                <span class="test-name">ChromeTests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxTests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">EdgeTests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -199,20 +270,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'registrationFromExcel')
 data.setCell(0, 2, 'nopcom.autm.tests.RegistrationTests')
-data.setCell(0, 3, 10072);
+data.setCell(0, 3, 5725);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'registrationFromExcel')
 data.setCell(1, 2, 'nopcom.autm.tests.RegistrationTests')
-data.setCell(1, 3, 5354);
+data.setCell(1, 3, 5691);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'registrationFromExcel')
+data.setCell(2, 2, 'nopcom.autm.tests.RegistrationTests')
+data.setCell(2, 3, 5611);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'registrationFromExcel')
+data.setCell(3, 2, 'nopcom.autm.tests.RegistrationTests')
+data.setCell(3, 3, 3142);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'registrationFromExcel')
+data.setCell(4, 2, 'nopcom.autm.tests.RegistrationTests')
+data.setCell(4, 3, 3129);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'registrationFromExcel')
+data.setCell(5, 2, 'nopcom.autm.tests.RegistrationTests')
+data.setCell(5, 3, 3060);
 window.suiteTableData['RegistrationSuite']= { tableData: data, tableDiv: 'times-div-RegistrationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-RegistrationSuite">
               </div> <!-- times-div-RegistrationSuite -->
             </div> <!-- times-div -->
@@ -243,25 +330,73 @@ return data;
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">1 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registrationFromExcel([John, Doe, john+1@example.com, Password123])</span>
-                <span class="method-start">43 ms</span>
+                <span class="method-start">49 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">registrationFromExcel([John, Doe, john+1@example.com, Password123])</span>
+                <span class="method-start">49 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">registrationFromExcel([John, Doe, john+1@example.com, Password123])</span>
+                <span class="method-start">49 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10128 ms</span>
+                <span class="method-start">5672 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5746 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5777 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">10314 ms</span>
+                <span class="method-start">6241 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6241 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">6242 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</span>
-                <span class="method-start">10316 ms</span>
+                <span class="method-start">6243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</span>
+                <span class="method-start">6243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">registrationFromExcel([Jane, Smith, jane+1@example.com, Password123])</span>
+                <span class="method-start">6243 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15673 ms</span>
+                <span class="method-start">9305 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9374 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9388 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

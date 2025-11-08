@@ -1,0 +1,1 @@
+{"uuid":"63b86509-9f2a-44c5-b3ab-17da203c7637","name":"nopcom.autm.base.BaseTest.setup","children":["04ac58cd-dcf6-4e88-adfa-dc401eebc83e"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1762570318118,"stop":1762570322560}],"afters":[],"start":1762570318118,"stop":1762570322560}
