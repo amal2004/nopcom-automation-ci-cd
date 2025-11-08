@@ -79,3 +79,7 @@ jobs:
           path: |
             target/surefire-reports
             target/allure-results
+			- name: Generate Allure Report
+			  if: always()
+			  run: mvn allure:report
+	
