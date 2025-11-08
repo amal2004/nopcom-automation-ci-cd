@@ -39,7 +39,7 @@ jobs:
       - name: Run Selenium tests (public URL)
         run: |
           mvn clean test \
-            -Dheadless=false \
+            -Dheadless=true \
             -DbaseUrl="https://plugindemos.supernopcommerce.com" \
             -Dwebdriver.chrome.args="--headless=new --no-sandbox --disable-dev-shm-usage --disable-gpu --window-size=1920,1080"
 
